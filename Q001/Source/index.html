@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM</title>
+</head>
+<body>
+    <form action="">
+        <div class="section">
+            <label for="Name">Name : </label>
+            <input type="text" id="Name" required>
+        </div><br>
+        <div class="section">
+            <label for="age">Age : </label>
+            <input type="number" id="age" required>
+        </div><br>
+        <div class="section">
+            <label for="income">Total Annual Income : </label>
+            <input type="number" id="income" required>
+        </div><br>
+        <div class="section">
+            <label for="invest">Total Annual Investment : </label>
+            <input type="number" id="invest" required>
+        </div><br>
+        <div class="section">
+            <label for="contact">Contact No. : </label>
+            <input type="number" id="contact" required>
+        </div>
+        <button type="button" onclick="myFunc()">Submit</button>
+        <div><strong id="show"></strong></div>
+    </form>
+    <p id="demo"></p>
+</body>
+<script>
+    function myFunc(){
+        var income = document.getElementById('income').value
+        var invest = document.getElementById('invest').value
+
+        var investPercent = (100 * invest) / income
+        document.getElementById('show').innerHTML = (investPercent)
+        // document.getElementById('demo').innerHTML = investPercent
+        console.log(investPercent);
+
+        var Name = document.getElementById('Name').value
+        var age = document.getElementById('age').value
+        var income = document.getElementById('income').value
+        var invest = document.getElementById('invest').value
+        var contact = document.getElementById('contact').value
+
+        if(Name == '' || age =='' || income == '' || invest =='' || contact == ''){
+            alert("Fullfill Details First..!")
+        } else {
+            alert("Form Submitted Sucessfully :)")
+        }
+    }
+</script>
+</html>
